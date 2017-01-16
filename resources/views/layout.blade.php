@@ -11,12 +11,11 @@
     <title>SIPAB</title>
 
 
-    <link href="/assets/css/bootstrap.css" rel="stylesheet">
-
-    <script src="/assets/js/bootstrap.js"></script>
-     <script src="/assets/js/bootstrap.min.js"></script>
+    <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
+   <script src="{{ asset('/assets/js/bootstrap.js') }}"></script>
+     <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+     
       <script src="/assets/js/npm.js"></script>
-
 
   </head>
 
