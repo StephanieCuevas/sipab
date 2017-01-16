@@ -1,4 +1,4 @@
-@extends('/layout')
+@extends('/administrador/layout')
 
 @section('content')
       <div class="jumbotron">

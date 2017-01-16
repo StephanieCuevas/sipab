@@ -87,6 +87,14 @@ class AuthController extends Controller
      */
     public function getIndex()
     {
+
+
+        //encriptamos una contraseña de prueba
+        // $usuario=UsuarioLocal::find(121);
+       //  $usuario->password=bcrypt('12345');
+        // $usuario->save();
+
+        //dd(bcrypt('12345'));
          if (property_exists($this, 'redirectPath')) {
             return $this->redirectPath;
         }

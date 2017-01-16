@@ -20,3 +20,21 @@ Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout',['uses'=>'Auth\AuthController@getLogout', 'as'=> 'logout']);
 
 
+Route::group(['middleware'=>['auth','administrador'],'prefix'=>'administrador'],function()
+{
+Route::get('/',function(){
+	return view('administrador/index');
+	});
+});
+
+//grupo de rutas de reclutamiento
+Route::group(['middleware'=>['auth','reclutamiento'],'prefix'=>'reclutamiento'],function()
+{
+
+
+Route::get('/',function(){
+	return view('reclutamiento/index');
+	});
+
+});
+
