@@ -20,26 +20,3 @@ Route::post('login', 'Auth\AuthController@postLogin');
 Route::get('logout',['uses'=>'Auth\AuthController@getLogout', 'as'=> 'logout']);
 
 
-
-/*
-
-Route::get('/', function () {
-    return view('index');
-});
-*/
-
-
-
-Route::resource('contrato', 'ContratoController');
-
-
-//busqueda
-
-
-Route::post('contrato/buscar',['uses'=>'ContratoController@find', 'as'=> 'buscarElemento']);
-
-//DEscarga word
-
-Route::post('contrato/word',['uses'=>'ContratoController@downloadWORD', 'as'=> 'descargarContrato']);
-
-//definir roles de usuario

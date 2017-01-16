@@ -48,7 +48,28 @@ return [
 
         
 
-       
+        'pgsql' => [
+            'driver'   => 'pgsql',
+            'host'     => env('DB_HOST'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ],
+
+
+        'respaldo' => [
+            'driver'   => 'pgsql',
+            'host'     => env('DB_HOST2'),
+            'database' => env('DB_DATABASE2'),
+            'username' => env('DB_USERNAME2'),
+            'password' => env('DB_PASSWORD2'),
+            'charset'  => 'utf8',
+            'prefix'   => '',
+            'schema'   => 'public',
+        ]
 
 
         
