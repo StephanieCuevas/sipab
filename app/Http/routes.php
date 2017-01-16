@@ -26,3 +26,5 @@ Route::post('contrato/buscar',['uses'=>'ContratoController@find', 'as'=> 'buscar
 //DEscarga word
 
 Route::post('contrato/word',['uses'=>'ContratoController@downloadWORD', 'as'=> 'descargarContrato']);
+
+//definir roles de usuario
