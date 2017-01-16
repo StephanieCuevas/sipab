@@ -17,6 +17,13 @@ return [
 
     'driver' => 'eloquent',
 
+    /**
+     * The database connection used by the model.
+     *
+     * @var string
+     */
+     'connection' => 'respaldo',
+
     /*
     |--------------------------------------------------------------------------
     | Authentication Model
@@ -41,7 +48,7 @@ return [
     |
     */
 
-    'table' => 'users',
+    'table' => 'usuario',
 
     /*
     |--------------------------------------------------------------------------

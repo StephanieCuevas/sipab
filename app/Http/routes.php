@@ -11,9 +11,24 @@
 |
 */
 
+
+
+Route::get('/',['uses'=> 'Auth\AuthController@getIndex', 'as'=> '/']);
+// RUTAS DE AUTENTICACION
+Route::get('login',['uses'=> 'Auth\AuthController@getLogin', 'as'=> 'login']);
+Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('logout',['uses'=>'Auth\AuthController@getLogout', 'as'=> 'logout']);
+
+
+
+/*
+
 Route::get('/', function () {
     return view('index');
 });
+*/
+
+
 
 Route::resource('contrato', 'ContratoController');
 
