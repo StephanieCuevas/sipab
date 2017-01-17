@@ -13,9 +13,6 @@
 
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
 
-    <script src="../assets/js/bootstrap.js"></script>
-     <script src="../assets/js/bootstrap.min.js"></script>
-      <script src="../assets/js/npm.js"></script>
 
 
   </head>
@@ -36,30 +33,36 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Contratos</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
+
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reclutamiento Personal<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Captura de prospecto</a></li>
+                <li><a href="#">Lista de prospectos</a></li>
+   
+              </ul>
+            </li>
+
+
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Consulta Elemento Policial<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Consulta por datos generales</a></li>
+                <li><a href="#">Consulta por estatus y rango de fecha</a></li>
+   
+              </ul>
+            </li>
+            <li><a href="#contact">Seguro de vida</a></li>
+            <li><a href="#contact">Credencialización</a></li>
             
 
 
 
 
-<!--
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
 
 
-            -->
+
           </ul>
 
         <ul class="nav navbar-nav navbar-right">
@@ -89,8 +92,9 @@
 
 
 
-
+{!!Html::script('assets/js/jquery.js')!!}
+{!!Html::script('assets/js/bootstrap.js')!!}
     </body>
-
+   
 
 </html>

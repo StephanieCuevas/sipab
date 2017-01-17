@@ -13,9 +13,7 @@
 
     <link href="/assets/css/bootstrap.css" rel="stylesheet">
 
-    <script src="/assets/js/bootstrap.js"></script>
-     <script src="/assets/js/bootstrap.min.js"></script>
-      <script src="/assets/js/npm.js"></script>
+
 
 
   </head>
@@ -78,9 +76,10 @@
  @yield('content')
 
 
-
+{!!Html::script('assets/js/jquery.js')!!}
+{!!Html::script('assets/js/bootstrap.js')!!}
 
     </body>
-
+ 
 
 </html>

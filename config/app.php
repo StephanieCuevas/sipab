@@ -149,6 +149,7 @@ return [
         *Librerias agregadas
         */
         Collective\Html\HtmlServiceProvider::class,
+        UxWeb\SweetAlert\SweetAlertServiceProvider::class
     ],
 
     /*
@@ -198,6 +199,7 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         'Form' => Collective\Html\FormFacade::class,
         'Html' => Collective\Html\HtmlFacade::class,
+        'Alert' => UxWeb\SweetAlert\SweetAlert::class
 
     ],
 
