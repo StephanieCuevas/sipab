@@ -12,6 +12,7 @@
 
 
     <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/sweetalert.css" rel="stylesheet">
 
 
 
@@ -94,6 +95,7 @@
 
 {!!Html::script('assets/js/jquery.js')!!}
 {!!Html::script('assets/js/bootstrap.js')!!}
+{!!Html::script('assets/js/sweetalert.min.js')!!}
     </body>
    
 

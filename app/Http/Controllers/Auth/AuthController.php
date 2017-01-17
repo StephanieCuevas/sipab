@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Auth;
 
 use App\User;
 use Validator;
+use Alert;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
 use Illuminate\Http\Request;
@@ -96,6 +97,8 @@ class AuthController extends Controller
 
         //dd(bcrypt('12345'));
          if (property_exists($this, 'redirectPath')) {
+
+            
             return $this->redirectPath;
         }
 
@@ -139,6 +142,8 @@ public function postLogin(Request $request){
         ];
         
         $validator = Validator::make($request->all(), $rules, $messages);
+        
+
         
         return redirect('login')
         ->withErrors($validator)

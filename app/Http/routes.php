@@ -27,6 +27,10 @@ Route::get('/',function(){
 	});
 });
 
+
+
+
+
 //grupo de rutas de reclutamiento
 Route::group(['middleware'=>['auth','reclutamiento'],'prefix'=>'reclutamiento'],function()
 {
