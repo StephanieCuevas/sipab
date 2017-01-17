@@ -13,19 +13,20 @@
 
     <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
    <script src="{{ asset('/assets/js/bootstrap.js') }}"></script>
-     <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+   <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
      
-      <script src="/assets/js/npm.js"></script>
+    <script src="/assets/js/npm.js"></script>
 
   </head>
 
   <body>
 
-<!-- AQUI VA EL NAVBAR -->
 
- @yield('content')
+   <!-- Menu lateral -->
+        @include('partes.menu')
 
 
+        @yield('content')
 
 
     </body>

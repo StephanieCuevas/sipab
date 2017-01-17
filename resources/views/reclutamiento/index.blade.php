@@ -1,4 +1,4 @@
-@extends('/reclutamiento/layout')
+@extends('reclutamiento.layout')
 
 
 
