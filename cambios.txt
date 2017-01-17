@@ -1,0 +1,43 @@
+commit 94a4392c4cb2e0553b747d294258c322c330af2d
+Author: stephanie <stephanie_chobits@hotmail.com>
+Date:   Mon Jan 16 14:09:38 2017 -0600
+
+    Cambios en rutas
+
+commit 505e61bb7de0fb6eae901878b8b0c8764b3a3d83
+Author: stephanie <stephanie_chobits@hotmail.com>
+Date:   Mon Jan 16 14:01:49 2017 -0600
+
+    Seguridad
+
+commit dbb51cb23a035cebbcc1a15edb87adaf292f4cb2
+Merge: 8edc283 cd38938
+Author: stephanie <stephanie_chobits@hotmail.com>
+Date:   Mon Jan 16 13:36:40 2017 -0600
+
+    Merge branch 'master' of https://github.com/StephanieCuevas/sipab
+
+commit 8edc283df54a6b39d344911aca2c6c80bc4a9a80
+Author: stephanie <stephanie_chobits@hotmail.com>
+Date:   Mon Jan 16 13:30:52 2017 -0600
+
+    Se agregaron los modelos de  rol,usuario, usuario_rol , asi como
+     las carpetas de las vistas
+
+commit cd3893880f1f4dcb1c5ba95634295b80dd35d8c5
+Author: Omar zarate Hipolito <alberich_sid@hotmail.com>
+Date:   Mon Jan 16 11:18:11 2017 -0600
+
+    modifique las lineas para jalar los css
+
+commit 438551881f7ff7f9cf265c911b0fa46d5cbee73a
+Author: stephanie <stephanie_chobits@hotmail.com>
+Date:   Mon Jan 16 08:56:17 2017 -0600
+
+    linea de prueba
+
+commit c34c21a44e7f825054f6b17513614220f4d2d80c
+Author: stephanie <stephanie_chobits@hotmail.com>
+Date:   Mon Jan 16 08:49:05 2017 -0600
+
+    Proyecto SIPAB inicial - el modulo de contrato

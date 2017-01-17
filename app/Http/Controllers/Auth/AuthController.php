@@ -6,6 +6,10 @@ use App\User;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Illuminate\Http\Request;
+use Auth;
+use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Foundation\Auth\ThrottlesLogins;
 
 class AuthController extends Controller
 {
@@ -41,9 +45,8 @@ class AuthController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|max:255',
-            'email' => 'required|email|max:255|unique:users',
-            'password' => 'required|confirmed|min:6',
+            'username' => 'required|max:50',
+            'password' => 'required|confirmed|min:5',
         ]);
     }
 
@@ -56,9 +59,95 @@ class AuthController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
+            
+            'username' => $data['username'],
             'password' => bcrypt($data['password']),
         ]);
     }
+//cehacra si sirve
+    public function loginPath()
+    {
+        return route('login');
+    }
+
+     public function redirectPath()
+    {
+        if (property_exists($this, 'redirectPath')) {
+            return $this->redirectPath;
+        }
+
+        return route('login');
+    }
+
+
+    /**
+     * Show the application login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function getIndex()
+    {
+
+
+        //encriptamos una contraseña de prueba
+        // $usuario=UsuarioLocal::find(121);
+       //  $usuario->password=bcrypt('12345');
+        // $usuario->save();
+
+        //dd(bcrypt('12345'));
+         if (property_exists($this, 'redirectPath')) {
+            return $this->redirectPath;
+        }
+
+       
+        return view('auth/login');
+    }
+    private function lockoutTime() 
+{
+    return property_exists($this, 'lockoutTime') ? $this->lockoutTime : 90;
+}
+
+
+protected function maxLoginAttempts()
+{
+    return property_exists($this, 'maxLoginAttempts') ? $this->maxLoginAttempts : 2;
+}
+
+
+
+
+public function postLogin(Request $request){
+    
+    if (Auth::attempt(
+            [
+                'username' => $request->username,
+                'password' => $request->password
+            ]
+            , $request->has('remember')
+            )){
+        return redirect()->intended($this->redirectPath());
+    }
+    else{
+        $rules = [
+            'username' => 'required',
+            'password' => 'required'
+        ];
+        
+        $messages = [
+            'username.required' => 'El nombre de usuario es requerido',
+            'password.required' => 'La contraseña es requerida'
+        ];
+        
+        $validator = Validator::make($request->all(), $rules, $messages);
+        
+        return redirect('login')
+        ->withErrors($validator)
+        ->withInput()
+        ->with('message', 'Error al iniciar sesión');
+    }
+}
+
+
+
+
 }

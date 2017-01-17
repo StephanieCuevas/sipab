@@ -21,8 +21,14 @@
 
   <body>
 
+<<<<<<< HEAD
    <!-- Menu lateral -->
         @include('partes.menu')
+=======
+<!-- AQUI VA EL NAVBAR -->
+
+ @yield('content')
+>>>>>>> 32afa54d583d4c1c1b929b968283e052d0b7d9dc
 
 
         @yield('content')

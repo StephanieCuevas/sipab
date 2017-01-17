@@ -50,10 +50,10 @@ return [
 
         'pgsql' => [
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', '172.16.0.13'),
-            'database' => env('DB_DATABASE', 'sipab_final'),
-            'username' => env('DB_USERNAME', 'sistemas'),
-            'password' => env('DB_PASSWORD', 's1st3m4s'),
+            'host'     => env('DB_HOST'),
+            'database' => env('DB_DATABASE'),
+            'username' => env('DB_USERNAME'),
+            'password' => env('DB_PASSWORD'),
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',
@@ -62,10 +62,10 @@ return [
 
         'respaldo' => [
             'driver'   => 'pgsql',
-            'host'     => env('DB_HOST', '172.16.0.13'),
-            'database' => env('DB_DATABASE', 'pabic'),
-            'username' => env('DB_USERNAME', 'sistemas'),
-            'password' => env('DB_PASSWORD', 's1st3m4s'),
+            'host'     => env('DB_HOST2'),
+            'database' => env('DB_DATABASE2'),
+            'username' => env('DB_USERNAME2'),
+            'password' => env('DB_PASSWORD2'),
             'charset'  => 'utf8',
             'prefix'   => '',
             'schema'   => 'public',

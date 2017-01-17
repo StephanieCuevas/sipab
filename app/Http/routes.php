@@ -11,23 +11,34 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
+
+
+Route::get('/',['uses'=> 'Auth\AuthController@getIndex', 'as'=> '/']);
+// RUTAS DE AUTENTICACION
+Route::get('login',['uses'=> 'Auth\AuthController@getLogin', 'as'=> 'login']);
+Route::post('login', 'Auth\AuthController@postLogin');
+Route::get('logout',['uses'=>'Auth\AuthController@getLogout', 'as'=> 'logout']);
+
+
+Route::group(['middleware'=>['auth','administrador'],'prefix'=>'administrador'],function()
+{
+Route::get('/',function(){
+	return view('administrador/index');
+	});
 });
 
-Route::resource('contrato', 'ContratoController');
+//grupo de rutas de reclutamiento
+Route::group(['middleware'=>['auth','reclutamiento'],'prefix'=>'reclutamiento'],function()
+{
 
 
-//busqueda
+Route::get('/',function(){
+	return view('reclutamiento/index');
+	});
+
+});
 
 
-Route::post('contrato/buscar',['uses'=>'ContratoController@find', 'as'=> 'buscarElemento']);
-
-//DEscarga word
-
-Route::post('contrato/word',['uses'=>'ContratoController@downloadWORD', 'as'=> 'descargarContrato']);
-
-//definir roles de usuario
 
 // Authentication routes...
 Route::get('auth/login', 'Auth\AuthController@getLogin');
@@ -37,3 +48,4 @@ Route::get('auth/logout', 'Auth\AuthController@getLogout');
 // Registration routes...
 Route::get('auth/register', 'Auth\AuthController@getRegister');
 Route::post('auth/register', 'Auth\AuthController@postRegister');
+

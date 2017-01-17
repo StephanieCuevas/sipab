@@ -57,6 +57,20 @@
 
             -->
           </ul>
+
+
+          <ul class="nav navbar-nav navbar-right">
+          @if (Auth::guest())
+            
+           
+      <li><a href="{{route('login')}}"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+          @else
+
+         
+            <li><a href="{{route('logout')}}"><span class="glyphicon glyphicon-log-out"></span>Cerrar sesion de {{ Auth::user()->username }}</a></li>
+
+          @endif
+        </ul>
         </div><!--/.nav-collapse -->
       </div>
     </nav>

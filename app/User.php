@@ -12,24 +12,36 @@ class User extends Model implements AuthenticatableContract, CanResetPasswordCon
 {
     use Authenticatable, CanResetPassword;
 
+    
+    /**
+     * The database connection used by the model.
+     *
+     * @var string
+     */
+     protected $connection = 'respaldo';
+ 
+     /**
+
     /**
      * The database table used by the model.
      *
      * @var string
      */
-    protected $table = 'users';
+
+    
+    protected $table = 'usuario';
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array
      */
-    protected $fillable = ['name', 'email', 'password'];
+    protected $fillable = ['id', 'version', 'account_expired','account_locked','dispensador','enabled','id_almacen','id_modulo','id_persona','id_sucursal','password','password_expired','username'];
 
     /**
      * The attributes excluded from the model's JSON form.
      *
      * @var array
      */
-    protected $hidden = ['password', 'remember_token'];
+    protected $hidden = [];
 }
