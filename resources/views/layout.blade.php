@@ -22,8 +22,7 @@
   <body>
 
 
-   <!-- Menu lateral -->
-        @include('partes.menu')
+  
 
 
         @yield('content')
