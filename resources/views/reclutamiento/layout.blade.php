@@ -11,12 +11,11 @@
     <title>SIPAB</title>
 
 
-    <link href="../assets/css/bootstrap.css" rel="stylesheet">
-
-    <script src="../assets/js/bootstrap.js"></script>
-     <script src="../assets/js/bootstrap.min.js"></script>
-      <script src="../assets/js/npm.js"></script>
-
+    <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
+   <script src="{{ asset('/assets/js/bootstrap.js') }}"></script>
+   <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+     
+    <script src="/assets/js/npm.js"></script>
 
   </head>
 
@@ -32,11 +31,11 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/">SIPAB 2017</a>
+          <a class="navbar-brand" href="{{ url('/') }}">SIPAB 2017</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="/">Contratos</a></li>
+            <li class="active"><a href="{{ url('/') }}">Contratos</a></li>
             <li><a href="#about">About</a></li>
             <li><a href="#contact">Contact</a></li>
             
