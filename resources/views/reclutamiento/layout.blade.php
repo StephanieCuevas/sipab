@@ -15,6 +15,15 @@
     <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
    <script src="{{ asset('/assets/js/bootstrap.js') }}"></script>
    <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
+
+    <script src="{{ asset('/jquery.tablesorter/jquery-latest.js') }}"></script>
+   <script src="{{ asset('/jquery.tablesorter/jquery.tablesorter.js') }}"></script>
+
+<link rel="stylesheet" href="/jquery.tablesorter/docs/css/jq.css" type="text/css" media="print, projection, screen" />
+<link rel="stylesheet" href="/jquery.tablesorter/themes/blue/style.css" type="text/css" id="" media="print, projection, screen" />
+
+
+
      
     <script src="/assets/js/npm.js"></script>
 
@@ -44,7 +53,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Reclutamiento Personal<span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li><a href="#">Captura de prospecto</a></li>
-                <li><a href="#">Lista de prospectos</a></li>
+                <li><a href=" {{route('reclutamiento.prospecto.index')}}">Lista de prospectos</a></li>
    
               </ul>
             </li>

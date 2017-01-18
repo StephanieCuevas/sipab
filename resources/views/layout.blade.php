@@ -11,7 +11,7 @@
     <title>SIPAB</title>
 
 
-    <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
+   <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
    <script src="{{ asset('/assets/js/bootstrap.js') }}"></script>
    <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
      
