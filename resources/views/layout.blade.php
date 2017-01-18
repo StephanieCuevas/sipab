@@ -12,10 +12,14 @@
 
 
    <link href="{{ asset('/assets/css/bootstrap.css') }}" rel="stylesheet">
+   <link href="{{ asset('/assets/css/agua.css') }}" rel="stylesheet">
    <script src="{{ asset('/assets/js/bootstrap.js') }}"></script>
+   <script src="{{ asset('/assets/js/jquery.js') }}"></script>
+     <script src="{{ asset('/assets/js/jquery.ripples.js') }}"></script>
+      <script src="{{ asset('/assets/js/agua.js') }}"></script>
    <script src="{{ asset('/assets/js/bootstrap.min.js') }}"></script>
      
-    <script src="/assets/js/npm.js"></script>
+  
 
   </head>
 
