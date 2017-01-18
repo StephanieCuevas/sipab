@@ -13,11 +13,13 @@ body {
 	text-align: center;
 }
 
-#login{
-	opacity: 0.94;
-	border-radius: 10px;
+#recordar{
+	color: black;
 }
-
+#sesion{
+	background-color: blue;
+	color: white;
+}
 
 h1 {
 	font-size: 32px;

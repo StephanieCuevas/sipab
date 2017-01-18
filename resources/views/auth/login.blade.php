@@ -10,8 +10,8 @@
 <div id="login">
 	<div class="row">
 		<div class="col-md-8 col-md-offset-2">
-			<div class="panel panel-default">
-				<div class="panel-heading">Iniciar sesion</div>
+			<div class="panel panel-primary">
+				<div class="panel-heading" >Iniciar sesion</div>
 				<div class="panel-body">
 					@if (count($errors) > 0)
 						<div class="alert alert-danger">
