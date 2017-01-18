@@ -4,8 +4,6 @@
 
 
 
-<div class="jumbotron">
-            <div class="container  center-block">
 
 
 
@@ -78,6 +76,5 @@
 	</div>
 </div>
 
-</div>
-</div>
+
 @endsection
